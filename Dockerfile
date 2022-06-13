@@ -18,7 +18,8 @@ FROM alpine:latest
 
 RUN apk --no-cache --no-progress add \
     ca-certificates \
-    tzdata
+    tzdata \
+    iptables
 ENV TZ="Asia/Shanghai"
 RUN cp "/usr/share/zoneinfo/$TZ" /etc/localtime && echo "$TZ" > /etc/timezone 
 
