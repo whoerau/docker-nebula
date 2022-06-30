@@ -24,7 +24,7 @@ ENV TZ="Asia/Shanghai"
 RUN cp "/usr/share/zoneinfo/$TZ" /etc/localtime && echo "$TZ" > /etc/timezone 
 
 WORKDIR /home
-COPY --from=binarybuilder /home/nebula/cmd/nebula/nebula /usr/loval/bin/nebula
+COPY --from=binarybuilder /home/nebula/cmd/nebula/nebula /usr/local/bin/nebula
 
 VOLUME ["/config"]
 
